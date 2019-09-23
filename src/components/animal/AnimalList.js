@@ -9,15 +9,15 @@ class AnimalList extends Component {
     animals: []
   };
 
-  deleteAnimal = (id) => {
-    AnimalManager.delete(id)
+  deleteAnimal = id => {
+    AnimalManager.softDelete(id)
       .then(AnimalManager.getAll)
       .then(parsedAnimals => {
         this.setState({
           animals: parsedAnimals
         });
       });
-  }
+  };
 
   componentDidMount() {
     console.log("ANIMAL LIST: ComponentDidMount");
@@ -35,13 +35,17 @@ class AnimalList extends Component {
 
     return (
       <div className="container-cards">
-        {this.state.animals.map(singleAnimal => (
-          <AnimalCard
-            deleteAnimalProp={this.deleteAnimal}
-            key={singleAnimal.id}
-            animalProp={singleAnimal}
-          />
-        ))}
+        {this.state.animals.map(singleAnimal =>
+          !singleAnimal.archived ? (
+            <AnimalCard
+              deleteAnimalProp={this.deleteAnimal}
+              key={singleAnimal.id}
+              animalProp={singleAnimal}
+            />
+          ) : (
+            null
+          )
+        )}
       </div>
     );
   }

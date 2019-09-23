@@ -1,28 +1,28 @@
 {
-    "animals": [
-        {
-            "id": 1,
-            "name": "Doodles",
-            "breed": "Poodle",
-            "archived": "true"
-        },
-        {
-            "id": 3,
-            "name": "Esme",
-            "breed": "Pitbull",
-            "archived": "false"
-        },
-        {
-            "id": 4,
-            "name": "Jenkins",
-            "breed": "Pitbull",
-            "archived": "false"
-        },
-        {
-            "id": 5,
-            "name": "Scupper",
-            "breed": "Pitbull",
-            "archived": "false"
-          }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "archived": true
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "archived": false
+    },
+    {
+      "id": 4,
+      "name": "Jenkins",
+      "breed": "Pitbull",
+      "archived": true
+    },
+    {
+      "id": 5,
+      "name": "Scupper",
+      "breed": "Pitbull",
+      "archived": true
+    }
+  ]
 }
