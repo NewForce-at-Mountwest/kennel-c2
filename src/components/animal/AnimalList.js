@@ -9,8 +9,6 @@ class AnimalList extends Component {
     animals: []
   };
 
-
-
   componentDidMount() {
     console.log("ANIMAL LIST: ComponentDidMount");
     //getAll from AnimalManager and hang on to that data; put it in state
@@ -26,14 +24,24 @@ class AnimalList extends Component {
     console.log("ANIMAL LIST: Render");
 
     return (
-      <div className="container-cards">
-        {this.state.animals.map(singleAnimal => (
-          <AnimalCard
-            key={singleAnimal.id}
-            animalProp={singleAnimal}
-          />
-        ))}
-      </div>
+      <>
+        <section className="section-content">
+          <button
+            type="button"
+            className="btn"
+            onClick={() => {
+              this.props.history.push("/animals/new");
+            }}
+          >
+            Admit Animal
+          </button>
+        </section>
+        <div className="container-cards">
+          {this.state.animals.map(singleAnimal => (
+            <AnimalCard key={singleAnimal.id} animalProp={singleAnimal} />
+          ))}
+        </div>
+      </>
     );
   }
 }
