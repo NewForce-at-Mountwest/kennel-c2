@@ -2,18 +2,18 @@
   "animals": [
     {
       "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle"
+      "name": "Doodles!!!!",
+      "breed": "Mastiff"
     },
     {
       "id": 2,
       "name": "Decker",
-      "breed": "German Sheperd"
+      "breed": "Mastiff"
     },
     {
-      "name": "hello",
-      "breed": "it's me",
-      "id": 3
+      "id": 3,
+      "name": "Fudge",
+      "breed": "Lab"
     }
   ]
 }
