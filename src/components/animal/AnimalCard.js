@@ -18,6 +18,9 @@ class AnimalCard extends Component {
           <Link to={`/animals/${this.props.animalProp.id}`}>
             <button>Details</button>
           </Link>
+          <Link to={`/animals/${this.props.animalProp.id}/edit`}>
+            <button>Edit</button>
+          </Link>
         </div>
       </div>
     );

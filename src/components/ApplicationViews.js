@@ -7,11 +7,19 @@ import AnimalForm from "./animal/AnimalForm";
 import Login from "./auth/Login";
 import EmployeeList from "./employee/EmployeeList";
 
+import AnimalEditForm from "./animal/AnimalEditForm"
 //only include these once they are built - previous practice exercise
 
 class ApplicationViews extends Component {
   isAuthenticated = () => localStorage.getItem("credentials") !== null;
 
+  // isAuthenticated(){
+  //     if(localStorage.getItem("credentials") === null){
+  //         return false
+  //     } else {
+  //         return true
+  //     }
+  // }
   render() {
     return (
       <React.Fragment>
@@ -56,6 +64,7 @@ class ApplicationViews extends Component {
           }}
         />
         <Route
+          exact
           path="/animals/:animalId(\d+)"
           render={props => {
             // Pass the animalId to the AnimalDetailComponent
@@ -68,6 +77,12 @@ class ApplicationViews extends Component {
             ) : (
               <Redirect to="/login" />
             );
+          }}
+        />
+        <Route
+          path="/animals/:animalId(\d+)/edit"
+          render={props => {
+            return <AnimalEditForm {...props} />;
           }}
         />
         <Route path="/login" component={Login} />
