@@ -1,19 +1,42 @@
 {
   "animals": [
     {
-      "id": 1,
-      "name": "Doodles",
-      "breed": "Poodle"
-    },
-    {
       "id": 2,
-      "name": "Decker",
-      "breed": "German Sheperd"
+      "name": "Doodles",
+      "breed": "German Sheperd",
+      "employeeId": 3
     },
     {
-      "name": "hello",
-      "breed": "it's me",
-      "id": 3
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "employeeId": 1
+    },
+    {
+      "name": "Jack",
+      "breed": "Big cat",
+      "id": 4,
+      "employeeId": 1
+    },
+    {
+      "name": "Angus",
+      "breed": "Gerbil",
+      "id": 5,
+      "employeeId": 2
+    }
+  ],
+  "employees": [
+    {
+        "id": 1,
+        "name": "Jessica Younker"
+    },
+    {
+        "id": 2,
+        "name": "Jordan Nelson"
+    },
+    {
+        "id": 3,
+        "name": "Zoe LeBlanc"
     }
   ]
 }
