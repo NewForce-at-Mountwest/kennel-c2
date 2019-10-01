@@ -6,9 +6,9 @@ import AnimalDetail from "./animal/AnimalDetail";
 import AnimalForm from "./animal/AnimalForm";
 import Login from "./auth/Login";
 import EmployeeList from "./employee/EmployeeList";
+import EmployeeWithAnimals from "./employee/EmployeeWithAnimals"
+import AnimalEditForm from "./animal/AnimalEditForm";
 
-import AnimalEditForm from "./animal/AnimalEditForm"
-//only include these once they are built - previous practice exercise
 
 class ApplicationViews extends Component {
   isAuthenticated = () => localStorage.getItem("credentials") !== null;
@@ -39,6 +39,12 @@ class ApplicationViews extends Component {
             } else {
               return <Redirect to="/login" />;
             }
+          }}
+        />
+        <Route
+          path="/employees/:employeeId(\d+)/details"
+          render={props => {
+            return <EmployeeWithAnimals {...props} />;
           }}
         />
 

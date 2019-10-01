@@ -20,7 +20,7 @@ class EmployeeList extends Component {
   }
 
   render() {
-    
+
 
     return (
       <>
@@ -32,7 +32,7 @@ class EmployeeList extends Component {
               this.props.history.push("/employees/new");
             }}
           >
-            Admit Animal
+            Hire Employee
           </button>
         </section>
         <div className="container-cards">

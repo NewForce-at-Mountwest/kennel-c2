@@ -10,7 +10,7 @@ class EmployeeCard extends Component {
             Name:<br />
             <span>{this.props.employee.name}</span>
           </h3>
-          <Link to={`/employees/${this.props.employee.id}`}>
+          <Link to={`/employees/${this.props.employee.id}/details`}>
             <button>Details</button>
           </Link>
         </div>
