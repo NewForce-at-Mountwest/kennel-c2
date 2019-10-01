@@ -13,21 +13,22 @@
       "employeeId": 3
     },
     {
-      "name": "Jack",
-      "breed": "Big cat",
       "id": 4,
-      "employeeId": 1
-    },
-    {
-      "name": "Angus",
-      "breed": "Gerbil",
-      "id": 5,
+      "name": "Hamburger",
+      "breed": "Big dog",
       "employeeId": 2
     },
     {
-      "name": "Frank",
-      "breed": "Gerbil",
-      "id": 6
+      "name": "Bubbles",
+      "breed": "Turkey",
+      "employeeId": "2",
+      "id": 8
+    },
+    {
+      "name": "Mumu",
+      "breed": "Ostrich",
+      "employeeId": 3,
+      "id": 9
     }
   ],
   "employees": [
