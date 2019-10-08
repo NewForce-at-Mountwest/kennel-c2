@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import the components we will need
-import AnimalCard from "./AnimalCard";
+import ResourceCard from "../generics/ResourceCard";
 import AnimalManager from "../../modules/AnimalManager";
 
 class AnimalList extends Component {
@@ -38,7 +38,13 @@ class AnimalList extends Component {
         </section>
         <div className="container-cards">
           {this.state.animals.map(singleAnimal => (
-            <AnimalCard key={singleAnimal.id} animalProp={singleAnimal} />
+            <ResourceCard
+              key={singleAnimal.id}
+              name={singleAnimal.name}
+              details={singleAnimal.breed}
+              resource="animals"
+              id={singleAnimal.id}
+            />
           ))}
         </div>
       </>

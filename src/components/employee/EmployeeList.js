@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 //import the components we will need
-import EmployeeCard from "./EmployeeCard";
+import ResourceCard from "../generics/ResourceCard"
 import EmployeeManager from "../../modules/EmployeeManager";
 
 class EmployeeList extends Component {
@@ -37,7 +37,12 @@ class EmployeeList extends Component {
         </section>
         <div className="container-cards">
           {this.state.employees.map(singleEmployee => (
-            <EmployeeCard key={singleEmployee.id} employee={singleEmployee} />
+            <ResourceCard
+            key={singleEmployee.id}
+            name={singleEmployee.name}
+            resource="employees"
+            id={singleEmployee.id}
+          />
           ))}
         </div>
       </>
